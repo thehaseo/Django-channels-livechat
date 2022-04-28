@@ -2,7 +2,7 @@ const user_username = JSON.parse(document.getElementById('user_username').textCo
 const roomName = JSON.parse(document.getElementById('room-name').textContent)
 
 const chatSocket = new WebSocket(
-    'ws://' +
+    'wss://' +
     window.location.host +
     '/ws/chat/' +
     roomName +
