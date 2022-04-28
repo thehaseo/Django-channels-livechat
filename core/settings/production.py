@@ -29,6 +29,6 @@ CHACHES = {
     }
 }
 
-CSRF_TRUSTED_ORIGINS = ['https://channels-livechat.herokuapp.com', 'localholst']
+CSRF_TRUSTED_ORIGINS = ['https://channels-livechat.herokuapp.com']
 
 django_heroku.settings(locals())
