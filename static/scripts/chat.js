@@ -17,6 +17,7 @@ function sendMessage(e) {
     const message = messageInputDom.value;
     chatSocket.send(JSON.stringify({
         "message": message,
+        "user": user_username
     }))
     messageInputDom.value = '';
 }
@@ -27,7 +28,7 @@ chatSocket.onmessage = function (e) {
     messageDiv.classList.add("container", "darker");
     let messageContent = document.createElement("p")
     let usertag = document.createElement("b")
-    let username = document.createTextNode(user_username)
+    let username = document.createTextNode(data.user)
     let message = document.createTextNode(data.message)
     messageDiv.appendChild(usertag)
     messageDiv.appendChild(messageContent)
